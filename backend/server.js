@@ -12,7 +12,7 @@ app.use(express.static("public"));
 // cors middleware
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5500" || ""],
+    origin: ["http://127.0.0.1:5500" || "https://demonews.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     exposedHeaders: ["set-cookie"],
