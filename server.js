@@ -22,7 +22,6 @@ app.use(
 const port = 3000;
 
 const API_KEY = process.env.NEWSAPI_KEY;
-console.log(API_KEY);
 const url = "https://newsapi.org/v2/everything?q=";
 
 app.get("/", (req, res) => {
@@ -33,7 +32,6 @@ app.get("/news", async (req, res) => {
   const query = req.query.q;
   try {
     const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    console.log(response);
     const newsData = await response.json();
     res.json(newsData); // Send news data back to client-side
   } catch (error) {
