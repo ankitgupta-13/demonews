@@ -4,7 +4,7 @@ function reload() {
   window.location.reload();
 }
 async function fetchNews(query) {
-  const res = await fetch(`http://localhost:3000/news?q=${query}`);
+  const res = await fetch(`https://demonews.onrender.com/news?q=${query}`);
   const data = await res.json();
   bindData(data.articles);
 }
